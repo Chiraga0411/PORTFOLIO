@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color: rgb(255, 255, 255);
+  --seccolor: rgb(231, 231, 231);
+  --txtcolor: rgb(40, 40, 40);
+  --hovercolor: rgb(203, 203, 203);
+}
+
+.dark {
+  --color: rgb(0, 0, 0);
+  --seccolor: rgb(38, 38, 38);
+  --txtcolor: rgb(205, 205, 205);
+  --hovercolor: rgb(64, 64, 64);
+}
+
+body {
+  background-color: var(--color);
+}
+
+/* Blue -> pink gradient text used by the logo and the typed name */
+.gradient-text {
+  background: linear-gradient(to right, rgb(77, 171, 247), rgb(232, 116, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
