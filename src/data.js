@@ -90,20 +90,20 @@ const dev = (name, variant = "original") =>
 
 // invert: icon is black, so flip it in dark mode
 export const SKILLS = [
-  { name: "HTML5", icon: dev("html5") },
-  { name: "CSS3", icon: dev("css3") },
-  { name: "JavaScript", icon: dev("javascript") },
-  { name: "React", icon: dev("react") },
-  { name: "Tailwind CSS", icon: dev("tailwindcss") },
-  { name: "Node.js", icon: dev("nodejs") },
-  { name: "Express.js", icon: dev("express"), invert: true },
-  { name: "MongoDB", icon: dev("mongodb") },
-  { name: "FastAPI", icon: dev("fastapi") },
-  { name: "Python", icon: dev("python") },
-  { name: "C++", icon: dev("cplusplus") },
-  { name: "C", icon: dev("c") },
-  { name: "Git", icon: dev("git") },
-  { name: "GitHub", icon: dev("github"), invert: true },
+  { name: "HTML5", url: "https://html.spec.whatwg.org/", icon: dev("html5") },
+  { name: "CSS3", url: "https://www.w3.org/Style/CSS/", icon: dev("css3") },
+  { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: dev("javascript") },
+  { name: "React", url: "https://react.dev/", icon: dev("react") },
+  { name: "Tailwind CSS", url: "https://tailwindcss.com/", icon: dev("tailwindcss") },
+  { name: "Node.js", url: "https://nodejs.org/", icon: dev("nodejs") },
+  { name: "Express.js", url: "https://expressjs.com/", icon: dev("express"), invert: true },
+  { name: "MongoDB", url: "https://www.mongodb.com/", icon: dev("mongodb") },
+  { name: "FastAPI", url: "https://fastapi.tiangolo.com/", icon: dev("fastapi") },
+  { name: "Python", url: "https://www.python.org/", icon: dev("python") },
+  { name: "C++", url: "https://isocpp.org/", icon: dev("cplusplus") },
+  { name: "C", url: "https://www.open-std.org/jtc1/sc22/wg14/", icon: dev("c") },
+  { name: "Git", url: "https://git-scm.com/", icon: dev("git") },
+  { name: "GitHub", url: "https://github.com/", icon: dev("github"), invert: true },
 ];
 
 export const CONTACT = {

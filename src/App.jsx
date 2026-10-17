@@ -12,9 +12,9 @@ import Footer from "./components/Footer";
 export default function App() {
   const [dark, setDark] = useState(() => {
     try {
-      return localStorage.getItem("theme") === "dark";
+      return localStorage.getItem("theme") !== "light"; // dark by default
     } catch {
-      return false;
+      return true;
     }
   });
 

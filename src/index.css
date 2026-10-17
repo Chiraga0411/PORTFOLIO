@@ -31,3 +31,48 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+
+/* ---------- "View My Work" orbiting ring ---------- */
+.orbit-btn {
+  /* light theme: grey track, black beam */
+  --track: rgba(0, 0, 0, 0.18);
+  --beam: rgb(20, 20, 20);
+}
+.dark .orbit-btn {
+  /* dark theme: dark-grey track, light beam */
+  --track: rgba(255, 255, 255, 0.18);
+  --beam: rgb(235, 235, 235);
+}
+
+.orbit-track {
+  stroke: var(--track);
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+.orbit-beam {
+  stroke: var(--beam);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 14 86; /* short line = 14% of the ring */
+  animation: orbit 3.5s linear infinite;
+  filter: drop-shadow(0 0 4px var(--beam));
+}
+
+/* hover: ring turns blue -> pink, glows and spins faster */
+.orbit-btn:hover .orbit-track {
+  stroke: rgba(176, 110, 255, 0.4);
+}
+.orbit-btn:hover .orbit-beam {
+  stroke: url(#orbit-grad);
+  stroke-dasharray: 24 76;
+  animation-duration: 1.3s;
+  filter: drop-shadow(0 0 6px rgba(200, 120, 255, 0.9));
+}
+
+@keyframes orbit {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
