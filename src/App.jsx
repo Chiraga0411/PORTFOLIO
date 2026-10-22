@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -44,6 +45,7 @@ export default function App() {
       </main>
       <hr />
       <Footer />
+      <Analytics />
     </>
   );
 }
